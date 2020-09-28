@@ -9,20 +9,18 @@
 
 {% block content %}
 
-{% if user.is_authenticated %}
+<div class="jumbotron">
 
-    Hi {{ user.username }}!
+    <h1 class="display-4">Newspaper app</h1>
 
-    <p><a href="{% url 'logout' %}">Log Out</a></p>
+    <p class="lead">A Newspaper wedsite built with Django.</p>
 
-{% else %}
+        <a class="btn btn-primary btn-lg" href="{% url 'article_list' %}"
 
-    <p>You are not logged in</p>
+        role="button">View All Articles</a>
 
-    <a href="{% url 'login' %}">Log In</a> |
+    </p>
 
-    <a hreg="{% url 'signup' %}>Sign Up</a>
-
-{% endif %}
+</div>
 
 {% endblock content %}

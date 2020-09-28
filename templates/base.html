@@ -68,4 +68,22 @@
   integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
   crossorigin="anonymous"></script>
   </body>
+
+       <nav class="navbar-expand-md navbar-dark bg-dark mb-4">
+
+           <a class="navbar-brand" href="{% url 'home' %}">Newsparer</a>
+
+           {% if user.it_authenticated %}
+
+               <ul class="navbar-nav mr-auto">
+
+   
+                   <li class="nav-item"><a href="{% url 'article_new' %}">+ New</a></li>
+
+               </ul>
+
+            {% endif %}
+
+            <button class="navbar-toggler" type="button" ...
+
 </html>
